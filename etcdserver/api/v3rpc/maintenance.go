@@ -25,7 +25,7 @@ import (
 	"github.com/coreos/etcd/mvcc/backend"
 	"github.com/coreos/etcd/pkg/types"
 	"github.com/coreos/etcd/version"
-	"golang.org/x/net/context"
+	"context"
 )
 
 type KVGetter interface {

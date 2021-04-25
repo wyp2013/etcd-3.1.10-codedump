@@ -19,7 +19,7 @@ import (
 	"sync"
 
 	v3 "github.com/coreos/etcd/clientv3"
-	"golang.org/x/net/context"
+	"context"
 )
 
 // Mutex implements the sync Locker interface with etcd

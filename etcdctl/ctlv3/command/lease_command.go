@@ -20,7 +20,7 @@ import (
 
 	v3 "github.com/coreos/etcd/clientv3"
 	"github.com/spf13/cobra"
-	"golang.org/x/net/context"
+	"context"
 )
 
 // NewLeaseCommand returns the cobra command for "lease".

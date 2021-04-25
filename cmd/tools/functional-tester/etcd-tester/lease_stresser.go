@@ -24,7 +24,7 @@ import (
 
 	"github.com/coreos/etcd/etcdserver/api/v3rpc/rpctypes"
 	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
-	"golang.org/x/net/context"
+	"context"
 	"golang.org/x/time/rate"
 	"google.golang.org/grpc"
 )

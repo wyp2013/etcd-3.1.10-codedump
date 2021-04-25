@@ -24,7 +24,7 @@ import (
 	"github.com/coreos/etcd/pkg/types"
 	"github.com/coreos/etcd/raft"
 	"github.com/coreos/etcd/raft/raftpb"
-	"golang.org/x/net/context"
+	"context"
 )
 
 func BenchmarkSendingMsgApp(b *testing.B) {

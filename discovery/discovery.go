@@ -33,7 +33,7 @@ import (
 	"github.com/coreos/etcd/pkg/types"
 	"github.com/coreos/pkg/capnslog"
 	"github.com/jonboulle/clockwork"
-	"golang.org/x/net/context"
+	"context"
 )
 
 var (

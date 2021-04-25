@@ -23,7 +23,7 @@ import (
 	"github.com/coreos/etcd/clientv3"
 	"github.com/coreos/etcd/clientv3/concurrency"
 	"github.com/coreos/etcd/contrib/recipes"
-	"golang.org/x/net/context"
+	"context"
 )
 
 func TestMutexSingleNode(t *testing.T) {

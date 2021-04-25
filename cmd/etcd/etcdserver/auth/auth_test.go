@@ -23,7 +23,7 @@ import (
 	"github.com/coreos/etcd/etcdserver"
 	"github.com/coreos/etcd/etcdserver/etcdserverpb"
 	etcdstore "github.com/coreos/etcd/store"
-	"golang.org/x/net/context"
+	"context"
 )
 
 type fakeDoer struct{}

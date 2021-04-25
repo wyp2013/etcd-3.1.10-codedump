@@ -20,7 +20,7 @@ import (
 	"net/http"
 	"net/url"
 
-	"golang.org/x/net/context"
+	"context"
 )
 
 type Role struct {

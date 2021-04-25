@@ -27,7 +27,7 @@ import (
 	"github.com/coreos/etcd/mvcc/mvccpb"
 	"github.com/coreos/etcd/pkg/schedule"
 	"github.com/coreos/pkg/capnslog"
-	"golang.org/x/net/context"
+	"context"
 	"runtime/debug"
 )
 

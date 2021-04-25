@@ -21,7 +21,7 @@ import (
 
 	pb "github.com/coreos/etcd/mvcc/mvccpb"
 	"github.com/spf13/cobra"
-	"golang.org/x/net/context"
+	"context"
 )
 
 func printKV(isHex bool, valueOnly bool, kv *pb.KeyValue) {

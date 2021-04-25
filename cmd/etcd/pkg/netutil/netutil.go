@@ -22,7 +22,7 @@ import (
 	"sort"
 	"time"
 
-	"golang.org/x/net/context"
+	"context"
 
 	"github.com/coreos/etcd/pkg/types"
 	"github.com/coreos/pkg/capnslog"

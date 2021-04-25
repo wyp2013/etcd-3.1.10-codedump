@@ -40,7 +40,7 @@ import (
 	"github.com/coreos/etcd/version"
 	"github.com/coreos/go-semver/semver"
 	"github.com/jonboulle/clockwork"
-	"golang.org/x/net/context"
+	"context"
 )
 
 func mustMarshalEvent(t *testing.T, ev *store.Event) string {

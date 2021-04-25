@@ -21,7 +21,7 @@ import (
 
 	"github.com/coreos/etcd/raft"
 	"github.com/coreos/etcd/raft/raftpb"
-	"golang.org/x/net/context"
+	"context"
 )
 
 type node struct {

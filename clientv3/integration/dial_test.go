@@ -22,7 +22,7 @@ import (
 	"github.com/coreos/etcd/clientv3"
 	"github.com/coreos/etcd/integration"
 	"github.com/coreos/etcd/pkg/testutil"
-	"golang.org/x/net/context"
+	"context"
 )
 
 // TestDialSetEndpoints ensures SetEndpoints can replace unavailable endpoints with available ones.

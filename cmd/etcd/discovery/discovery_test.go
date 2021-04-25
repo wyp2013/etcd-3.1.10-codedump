@@ -26,7 +26,7 @@ import (
 	"time"
 
 	"github.com/jonboulle/clockwork"
-	"golang.org/x/net/context"
+	"context"
 
 	"github.com/coreos/etcd/client"
 )

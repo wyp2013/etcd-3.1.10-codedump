@@ -21,7 +21,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"golang.org/x/net/context" // grpc does a comparison on context.Cancel; can't use "context" package
+	"context" // grpc does a comparison on context.Cancel; can't use "context" package
 	"golang.org/x/time/rate"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/transport"

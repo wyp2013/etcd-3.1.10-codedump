@@ -41,7 +41,7 @@ import (
 	"github.com/coreos/etcd/raft/raftpb"
 	"github.com/coreos/etcd/rafthttp"
 	"github.com/coreos/etcd/store"
-	"golang.org/x/net/context"
+	"context"
 )
 
 // TestDoLocalAction tests requests which do not need to go through raft to be applied,

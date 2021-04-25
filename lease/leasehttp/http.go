@@ -26,7 +26,7 @@ import (
 	"github.com/coreos/etcd/lease"
 	"github.com/coreos/etcd/lease/leasepb"
 	"github.com/coreos/etcd/pkg/httputil"
-	"golang.org/x/net/context"
+	"context"
 )
 
 var (

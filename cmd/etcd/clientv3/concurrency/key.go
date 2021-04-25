@@ -19,7 +19,7 @@ import (
 
 	v3 "github.com/coreos/etcd/clientv3"
 	"github.com/coreos/etcd/mvcc/mvccpb"
-	"golang.org/x/net/context"
+	"context"
 )
 
 func waitDelete(ctx context.Context, client *v3.Client, key string, rev int64) error {

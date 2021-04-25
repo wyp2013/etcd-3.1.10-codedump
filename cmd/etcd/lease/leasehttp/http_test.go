@@ -25,7 +25,7 @@ import (
 	"github.com/coreos/etcd/lease"
 	"github.com/coreos/etcd/mvcc/backend"
 
-	"golang.org/x/net/context"
+	"context"
 )
 
 func TestRenewHTTP(t *testing.T) {

@@ -28,7 +28,7 @@ import (
 	"time"
 
 	"github.com/coreos/etcd/pkg/testutil"
-	"golang.org/x/net/context"
+	"context"
 )
 
 type actionAssertingHTTPClient struct {

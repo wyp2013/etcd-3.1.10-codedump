@@ -21,7 +21,7 @@ import (
 	etcderr "github.com/coreos/etcd/error"
 	"github.com/coreos/etcd/etcdserver"
 	"github.com/coreos/etcd/etcdserver/etcdserverpb"
-	"golang.org/x/net/context"
+	"context"
 )
 
 func (s *store) ensureAuthDirectories() error {

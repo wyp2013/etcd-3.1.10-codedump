@@ -22,7 +22,7 @@ import (
 
 	"github.com/coreos/etcd/client"
 	"github.com/urfave/cli"
-	"golang.org/x/net/context"
+	"context"
 )
 
 // NewWatchCommand returns the CLI command for "watch".

@@ -25,7 +25,7 @@ import (
 	"github.com/coreos/etcd/raft"
 
 	prometheus "github.com/grpc-ecosystem/go-grpc-prometheus"
-	"golang.org/x/net/context"
+	"context"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"
 )

@@ -22,7 +22,7 @@ import (
 
 	"github.com/coreos/etcd/pkg/testutil"
 	"github.com/coreos/etcd/raft/raftpb"
-	"golang.org/x/net/context"
+	"context"
 )
 
 // TestNodeStep ensures that node.Step sends msgProp to propc chan

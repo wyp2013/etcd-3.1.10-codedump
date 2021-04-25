@@ -21,7 +21,7 @@ import (
 	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
 	"github.com/coreos/etcd/mvcc/backend"
 	"golang.org/x/crypto/bcrypt"
-	"golang.org/x/net/context"
+	"context"
 )
 
 func init() { BcryptCost = bcrypt.MinCost }
