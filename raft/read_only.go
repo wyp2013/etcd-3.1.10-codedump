@@ -116,7 +116,8 @@ func (ro *readOnly) advance(m pb.Message) []*readIndexStatus {
 	}
 
 	if found {
-		// 找到了，就丢弃在这之前的队列readonly数据了
+		// 找到了，就丢弃在这之前的队列readonly数据了，
+		// 最后一个存放的是找到的请求，在处理readStateC的时候，取的也是最后一个
 		ro.readIndexQueue = ro.readIndexQueue[i:]
 		for _, rs := range rss {
 			// 遍历队列从map中删除

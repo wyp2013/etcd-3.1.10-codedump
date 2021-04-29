@@ -401,7 +401,8 @@ func (r *raft) sendAppend(to uint64) {
 	// 获取从该节点的Next之后的entries，总和不超过maxMsgSize
 	ents, erre := r.raftLog.entries(pr.Next, r.maxMsgSize)
 
-	if errt != nil || erre != nil { // send snapshot if we failed to get term or entries
+	if errt != nil || erre != nil {
+		// send snapshot if we failed to get term or entries
 		// 如果前面过程中有错，那说明之前的数据都写到快照里了，尝试发送快照数据过去
 		if !pr.RecentActive {
 			// 如果该节点当前不可用
@@ -430,14 +431,16 @@ func (r *raft) sendAppend(to uint64) {
 		// 该节点进入接收快照的状态
 		pr.becomeSnapshot(sindex)
 		r.logger.Debugf("%x paused sending replication messages to %x [%s]", r.id, to, pr)
-	} else { // 否则就是简单的发送append消息
+	} else {
+		// 否则就是简单的发送append消息
 		m.Type = pb.MsgApp
 		m.Index = pr.Next - 1
 		m.LogTerm = term
 		m.Entries = ents
 		// append消息需要告知当前leader的commit索引
 		m.Commit = r.raftLog.committed
-		if n := len(m.Entries); n != 0 {	// 如果发送过去的entries不为空
+		// 如果发送过去的entries不为空
+		if n := len(m.Entries); n != 0 {
 			switch pr.State {
 			// optimistically increase the next when in ProgressStateReplicate
 			case ProgressStateReplicate:
@@ -990,11 +993,13 @@ func stepLeader(r *raft, m pb.Message) {
 		return
 	}
 	switch m.Type {
-	case pb.MsgAppResp:	// 对append消息的应答
+	case pb.MsgAppResp:
+		// 对append消息的应答
 		// 置位该节点当前是活跃的
 		pr.RecentActive = true
 
-		if m.Reject {	// 如果拒绝了append消息，说明term、index不匹配
+		if m.Reject {
+			// 如果拒绝了append消息，说明term、index不匹配
 			r.logger.Debugf("%x received msgApp rejection(lastindex: %d) from %x for index %d",
 				r.id, m.RejectHint, m.From, m.Index)
 			// rejecthint带来的是拒绝该app请求的节点，其最大日志的索引
@@ -1006,9 +1011,11 @@ func stepLeader(r *raft, m pb.Message) {
 				// 再次发送append消息
 				r.sendAppend(m.From)
 			}
-		} else {	// 通过该append请求
+		} else {
+			// 通过该append请求
 			oldPaused := pr.IsPaused()
-			if pr.maybeUpdate(m.Index) {	// 如果该节点的索引发生了更新
+			// 如果该节点的索引发生了更新
+			if pr.maybeUpdate(m.Index) {
 				switch {
 				case pr.State == ProgressStateProbe:
 					// 如果当前该节点在探测状态，切换到可以接收副本状态

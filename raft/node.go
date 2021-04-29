@@ -570,6 +570,7 @@ func newReady(r *raft, prevSoftSt *SoftState, prevHardSt pb.HardState) Ready {
 		Messages:         r.msgs,
 	}
 	if softSt := r.softState(); !softSt.equal(prevSoftSt) {
+		// lead、节点状态
 		rd.SoftState = softSt
 	}
 	if hardSt := r.hardState(); !isHardStateEqual(hardSt, prevHardSt) {
@@ -580,6 +581,7 @@ func newReady(r *raft, prevSoftSt *SoftState, prevHardSt pb.HardState) Ready {
 		rd.Snapshot = *r.raftLog.unstable.snapshot
 	}
 	if len(r.readStates) != 0 {
+		// 如果有一致性只读请求返回，存放处理ReadIndex()请求的返回数据
 		rd.ReadStates = r.readStates
 	}
 	return rd

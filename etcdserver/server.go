@@ -788,7 +788,7 @@ func (s *EtcdServer) run() {
 
 // 应用数据
 func (s *EtcdServer) applyAll(ep *etcdProgress, apply *apply) {
-	// 快照数据
+	// 快照数据，写wal
 	s.applySnapshot(ep, apply)
 	st := time.Now()
 	// 日志数据

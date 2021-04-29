@@ -150,7 +150,19 @@ func (r *raftNode) start(rh *raftReadyHandler) {
 			case <-r.ticker:
 				r.Tick()
 			case rd := <-r.Ready():
-				if rd.SoftState != nil {	// 软状态发生变化
+				/*
+				   raft lib 向server提交需要处理的数据：
+				     1. unstable的entries需要持久化到wal文件
+				     2. 节点软状态(leader、state)、
+				     3. 只读请求处理结果、
+				     4. 需要apply的committed entries日志、
+				     5. 需要更新的snapshot日志、
+				     6. 需要向follow发送的messages、
+				     7. 节点硬状态(term、vote、commit)
+				*/
+
+				// 软状态发生变化
+				if rd.SoftState != nil {
 					// 新旧leader不一样
 					if lead := atomic.LoadUint64(&r.lead); rd.SoftState.Lead != raft.None && lead != rd.SoftState.Lead {
 						r.mu.Lock()
@@ -174,9 +186,11 @@ func (r *raftNode) start(rh *raftReadyHandler) {
 					rh.updateLeadership()
 				}
 
+				// 只读请求有返回，处理逻辑在s.linearizableReadLoop()函数中
 				if len(rd.ReadStates) != 0 {
 					select {
 					case r.readStateC <- rd.ReadStates[len(rd.ReadStates)-1]:
+						// 最后一个的commit最大
 					case <-time.After(internalTimeout):
 						plog.Warningf("timed out sending read state")
 					case <-r.stopped:
@@ -184,18 +198,19 @@ func (r *raftNode) start(rh *raftReadyHandler) {
 					}
 				}
 
+				// 处理需要持久化存储的committed日志，处理逻辑在s.applyAll()函数中
 				raftDone := make(chan struct{}, 1)
 				ap := apply{
 					entries:  rd.CommittedEntries,
 					snapshot: rd.Snapshot,
-					raftDone: raftDone,
+					raftDone: raftDone, // 用来通知应用层，raft处理数据完成，应用层可以触发写快照
 				}
 
 				// 更新commit index
 				updateCommittedIndex(&ap, rh)
 
 				select {
-				// etcdserver主循环在监听这个applyc管道的数据
+				// etcdserver主循环在监听这个applyc管道的数据，由函数s.applyAll处理数据
 				case r.applyc <- ap:
 				case <-r.stopped:
 					return
@@ -210,7 +225,7 @@ func (r *raftNode) start(rh *raftReadyHandler) {
 				}
 
 				// gofail: var raftBeforeSave struct{}
-				// 将ready的HS和日志条目写入持久化存储，在这里是写入WAL中。
+				// 将ready的HS和 unstable的日志条目写入持久化存储，在这里是写入WAL中
 				if err := r.storage.Save(rd.HardState, rd.Entries); err != nil {
 					plog.Fatalf("raft save state and entries error: %v", err)
 				}
