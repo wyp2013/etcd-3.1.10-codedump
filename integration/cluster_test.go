@@ -29,7 +29,7 @@ import (
 	"github.com/coreos/etcd/pkg/testutil"
 	"github.com/coreos/pkg/capnslog"
 
-	"context"
+	"golang.org/x/net/context"
 )
 
 func init() {

@@ -21,7 +21,7 @@ Create a Config and exchange it for a Client:
 		"net/http"
 
 		"github.com/coreos/etcd/client"
-		"context"
+		"golang.org/x/net/context"
 	)
 
 	cfg := client.Config{

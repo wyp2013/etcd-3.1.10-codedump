@@ -23,7 +23,7 @@ import (
 
 	"github.com/coreos/etcd/client"
 	"github.com/coreos/etcd/pkg/testutil"
-	"context"
+	"golang.org/x/net/context"
 )
 
 func TestPauseMember(t *testing.T) {

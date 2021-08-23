@@ -30,7 +30,7 @@ import (
 	"github.com/coreos/etcd/pkg/transport"
 
 	"github.com/prometheus/client_golang/prometheus"
-	"context"
+	"golang.org/x/net/context"
 )
 
 func TestV3ClientMetrics(t *testing.T) {

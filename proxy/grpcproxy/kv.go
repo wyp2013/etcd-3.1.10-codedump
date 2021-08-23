@@ -19,7 +19,7 @@ import (
 	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
 	"github.com/coreos/etcd/proxy/grpcproxy/cache"
 
-	"context"
+	"golang.org/x/net/context"
 )
 
 type kvProxy struct {

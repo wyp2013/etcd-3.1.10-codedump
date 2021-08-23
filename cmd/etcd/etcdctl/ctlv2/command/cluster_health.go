@@ -25,7 +25,7 @@ import (
 
 	"github.com/coreos/etcd/client"
 	"github.com/urfave/cli"
-	"context"
+	"golang.org/x/net/context"
 )
 
 func NewClusterHealthCommand() cli.Command {

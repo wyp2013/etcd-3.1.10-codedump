@@ -19,7 +19,7 @@ import (
 	"log"
 
 	"github.com/coreos/etcd/clientv3"
-	"context"
+	"golang.org/x/net/context"
 )
 
 func ExampleLease_grant() {

@@ -17,7 +17,7 @@ package recipe
 import (
 	v3 "github.com/coreos/etcd/clientv3"
 	"github.com/coreos/etcd/mvcc/mvccpb"
-	"context"
+	"golang.org/x/net/context"
 )
 
 // Barrier creates a key in etcd to block processes, then deletes the key to

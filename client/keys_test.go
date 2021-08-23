@@ -24,7 +24,7 @@ import (
 	"testing"
 	"time"
 
-	"context"
+	"golang.org/x/net/context"
 )
 
 func TestV2KeysURLHelper(t *testing.T) {

@@ -31,7 +31,7 @@ import (
 	"github.com/coreos/etcd/client"
 	"github.com/coreos/etcd/pkg/transport"
 	"github.com/urfave/cli"
-	"context"
+	"golang.org/x/net/context"
 )
 
 var (

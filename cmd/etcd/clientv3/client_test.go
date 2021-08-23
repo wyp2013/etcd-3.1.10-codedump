@@ -22,7 +22,7 @@ import (
 
 	"github.com/coreos/etcd/etcdserver/api/v3rpc/rpctypes"
 	"github.com/coreos/etcd/pkg/testutil"
-	"context"
+	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 )
 

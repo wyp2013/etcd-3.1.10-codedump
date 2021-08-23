@@ -18,7 +18,7 @@ import (
 	"errors"
 
 	pb "github.com/coreos/etcd/raft/raftpb"
-	"context"
+	"golang.org/x/net/context"
 )
 
 type SnapshotStatus int
@@ -57,7 +57,7 @@ type Ready struct {
 	// The current volatile state of a Node.
 	// SoftState will be nil if there is no update.
 	// It is not required to consume or store SoftState.
-	// 软状态是异变的，包括：当前集群leader、当前节点状态
+	// 软状态是易变的，包括：当前集群leader、当前节点状态
 	*SoftState
 
 	// The current state of a Node to be saved to stable storage BEFORE

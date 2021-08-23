@@ -28,7 +28,7 @@ import (
 	"github.com/coreos/etcd/pkg/types"
 	"github.com/coreos/etcd/raft/raftpb"
 	"github.com/coreos/go-semver/semver"
-	"context"
+	"golang.org/x/net/context"
 )
 
 type fakeCluster struct {

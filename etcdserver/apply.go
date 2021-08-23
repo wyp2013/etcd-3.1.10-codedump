@@ -26,7 +26,7 @@ import (
 	"github.com/coreos/etcd/mvcc/mvccpb"
 	"github.com/coreos/etcd/pkg/types"
 	"github.com/gogo/protobuf/proto"
-	"context"
+	"golang.org/x/net/context"
 )
 
 const (
@@ -175,7 +175,8 @@ func (a *applierV3backend) Put(txnID int64, p *pb.PutRequest) (*pb.PutResponse, 
 		}
 	}
 
-	if txnID != noTxn {	// 传入的事务ID不为空
+	if txnID != noTxn {
+		// 传入的事务ID不为空
 		rev, err = a.s.KV().TxnPut(txnID, p.Key, p.Value, lease.LeaseID(p.Lease))
 		if err != nil {
 			return nil, err

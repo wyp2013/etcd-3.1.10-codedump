@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"log"
 
-	"context"
+	"golang.org/x/net/context"
 
 	"github.com/coreos/etcd/clientv3"
 )

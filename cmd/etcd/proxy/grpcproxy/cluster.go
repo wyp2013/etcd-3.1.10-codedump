@@ -18,7 +18,7 @@ import (
 	"github.com/coreos/etcd/clientv3"
 	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
 
-	"context"
+	"golang.org/x/net/context"
 )
 
 type clusterProxy struct {

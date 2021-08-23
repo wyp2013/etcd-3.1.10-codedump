@@ -19,7 +19,7 @@ import (
 	"time"
 
 	"github.com/coreos/etcd/raft"
-	"context"
+	"golang.org/x/net/context"
 )
 
 func BenchmarkProposal3Nodes(b *testing.B) {

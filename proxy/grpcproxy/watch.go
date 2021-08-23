@@ -17,7 +17,7 @@ package grpcproxy
 import (
 	"sync"
 
-	"context"
+	"golang.org/x/net/context"
 	"golang.org/x/time/rate"
 	"google.golang.org/grpc/metadata"
 

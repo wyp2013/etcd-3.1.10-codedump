@@ -43,7 +43,7 @@ import (
 	"github.com/coreos/etcd/wal"
 	"github.com/coreos/etcd/wal/walpb"
 	"github.com/spf13/cobra"
-	"context"
+	"golang.org/x/net/context"
 )
 
 const (

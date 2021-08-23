@@ -20,7 +20,7 @@ import (
 	"net/url"
 	"time"
 
-	"context"
+	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 
 	"github.com/coreos/etcd/clientv3"

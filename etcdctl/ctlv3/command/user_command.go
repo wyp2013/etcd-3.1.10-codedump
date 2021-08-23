@@ -20,7 +20,7 @@ import (
 
 	"github.com/bgentry/speakeasy"
 	"github.com/spf13/cobra"
-	"context"
+	"golang.org/x/net/context"
 )
 
 var (

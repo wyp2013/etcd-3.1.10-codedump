@@ -22,7 +22,7 @@ import (
 	"reflect"
 	"testing"
 
-	"context"
+	"golang.org/x/net/context"
 
 	"github.com/coreos/etcd/pkg/types"
 )

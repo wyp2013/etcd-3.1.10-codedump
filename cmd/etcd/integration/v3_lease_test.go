@@ -19,7 +19,7 @@ import (
 	"testing"
 	"time"
 
-	"context"
+	"golang.org/x/net/context"
 	"google.golang.org/grpc/metadata"
 
 	"github.com/coreos/etcd/etcdserver/api/v3rpc/rpctypes"

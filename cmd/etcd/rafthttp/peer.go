@@ -23,7 +23,7 @@ import (
 	"github.com/coreos/etcd/raft"
 	"github.com/coreos/etcd/raft/raftpb"
 	"github.com/coreos/etcd/snap"
-	"context"
+	"golang.org/x/net/context"
 )
 
 const (

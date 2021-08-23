@@ -22,7 +22,7 @@ import (
 
 	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
 	"github.com/coreos/etcd/pkg/testutil"
-	"context"
+	"golang.org/x/net/context"
 )
 
 // TestV3MaintenanceHashInflight ensures inflight Hash call

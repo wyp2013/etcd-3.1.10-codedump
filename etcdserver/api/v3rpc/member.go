@@ -23,7 +23,7 @@ import (
 	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
 	"github.com/coreos/etcd/etcdserver/membership"
 	"github.com/coreos/etcd/pkg/types"
-	"context"
+	"golang.org/x/net/context"
 )
 
 type ClusterServer struct {

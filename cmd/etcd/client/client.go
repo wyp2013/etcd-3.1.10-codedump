@@ -27,7 +27,7 @@ import (
 	"sync"
 	"time"
 
-	"context"
+	"golang.org/x/net/context"
 )
 
 var (

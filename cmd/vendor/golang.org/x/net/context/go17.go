@@ -7,7 +7,7 @@
 package context
 
 import (
-	"context" // standard library's context, as of Go 1.7
+	"golang.org/x/net/context" // standard library's context, as of Go 1.7
 	"time"
 )
 

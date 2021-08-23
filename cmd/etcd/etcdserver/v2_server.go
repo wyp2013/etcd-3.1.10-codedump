@@ -18,7 +18,7 @@ import (
 	"time"
 
 	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
-	"context"
+	"golang.org/x/net/context"
 )
 
 type v2API interface {

@@ -28,7 +28,7 @@ import (
 	"github.com/coreos/etcd/integration"
 	mvccpb "github.com/coreos/etcd/mvcc/mvccpb"
 	"github.com/coreos/etcd/pkg/testutil"
-	"context"
+	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 )
 

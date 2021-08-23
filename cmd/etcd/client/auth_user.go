@@ -21,7 +21,7 @@ import (
 	"net/url"
 	"path"
 
-	"context"
+	"golang.org/x/net/context"
 )
 
 var (

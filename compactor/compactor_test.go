@@ -22,7 +22,7 @@ import (
 	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
 	"github.com/coreos/etcd/pkg/testutil"
 	"github.com/jonboulle/clockwork"
-	"context"
+	"golang.org/x/net/context"
 )
 
 func TestPeriodic(t *testing.T) {

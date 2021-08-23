@@ -28,7 +28,7 @@ import (
 	"github.com/coreos/etcd/raft"
 
 	"github.com/coreos/go-semver/semver"
-	"context"
+	"golang.org/x/net/context"
 )
 
 const (

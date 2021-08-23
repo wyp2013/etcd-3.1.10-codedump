@@ -23,7 +23,7 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"context"
+	"golang.org/x/net/context"
 
 	"github.com/coreos/etcd/client"
 	"github.com/coreos/etcd/integration"

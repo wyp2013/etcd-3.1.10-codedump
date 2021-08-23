@@ -21,7 +21,7 @@ import (
 	"strings"
 	"time"
 
-	"context"
+	"golang.org/x/net/context"
 
 	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
 	"github.com/coreos/etcd/tools/functional-tester/etcd-agent/client"

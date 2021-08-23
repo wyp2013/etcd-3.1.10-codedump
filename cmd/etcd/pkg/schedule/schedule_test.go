@@ -17,7 +17,7 @@ package schedule
 import (
 	"testing"
 
-	"context"
+	"golang.org/x/net/context"
 )
 
 func TestFIFOSchedule(t *testing.T) {

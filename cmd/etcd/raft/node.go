@@ -18,7 +18,7 @@ import (
 	"errors"
 
 	pb "github.com/coreos/etcd/raft/raftpb"
-	"context"
+	"golang.org/x/net/context"
 )
 
 type SnapshotStatus int

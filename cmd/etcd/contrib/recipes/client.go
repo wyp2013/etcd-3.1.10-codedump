@@ -19,7 +19,7 @@ import (
 
 	v3 "github.com/coreos/etcd/clientv3"
 	spb "github.com/coreos/etcd/mvcc/mvccpb"
-	"context"
+	"golang.org/x/net/context"
 )
 
 var (

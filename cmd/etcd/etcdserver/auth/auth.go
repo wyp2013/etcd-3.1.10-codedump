@@ -31,7 +31,7 @@ import (
 	"github.com/coreos/etcd/pkg/types"
 	"github.com/coreos/pkg/capnslog"
 	"golang.org/x/crypto/bcrypt"
-	"context"
+	"golang.org/x/net/context"
 )
 
 const (

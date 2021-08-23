@@ -28,7 +28,7 @@ import (
 	"github.com/coreos/etcd/snap"
 	"github.com/coreos/pkg/capnslog"
 	"github.com/xiang90/probing"
-	"context"
+	"golang.org/x/net/context"
 )
 
 var plog = logutil.NewMergeLogger(capnslog.NewPackageLogger("github.com/coreos/etcd", "rafthttp"))

@@ -29,7 +29,7 @@ import (
 	"github.com/coreos/etcd/mvcc/backend"
 	"github.com/coreos/pkg/capnslog"
 	"golang.org/x/crypto/bcrypt"
-	"context"
+	"golang.org/x/net/context"
 	"google.golang.org/grpc/metadata"
 )
 

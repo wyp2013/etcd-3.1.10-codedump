@@ -22,7 +22,7 @@ import (
 	"github.com/coreos/etcd/integration"
 	"github.com/coreos/etcd/pkg/testutil"
 	"github.com/coreos/etcd/pkg/types"
-	"context"
+	"golang.org/x/net/context"
 )
 
 func TestMemberList(t *testing.T) {

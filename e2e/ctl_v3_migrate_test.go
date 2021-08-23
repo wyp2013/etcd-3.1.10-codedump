@@ -20,7 +20,7 @@ import (
 	"testing"
 	"time"
 
-	"context"
+	"golang.org/x/net/context"
 
 	"github.com/coreos/etcd/clientv3"
 	"github.com/coreos/etcd/pkg/testutil"

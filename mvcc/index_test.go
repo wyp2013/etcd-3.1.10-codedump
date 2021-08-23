@@ -15,11 +15,32 @@
 package mvcc
 
 import (
+	"fmt"
 	"reflect"
 	"testing"
 
 	"github.com/google/btree"
 )
+
+func TestIndexGet0(t *testing.T) {
+	ti := newTreeIndex()
+	ti.Put([]byte("foo"), revision{main: 1, sub:1})
+	ti.Put([]byte("foo"), revision{main: 1, sub:2})
+
+	ti.Put([]byte("foo"), revision{main: 2, sub:1})
+
+	m,c,v,err := ti.Get([]byte("foo"), 1)
+	if err != ErrRevisionNotFound {
+		fmt.Println(m, c, v)
+	}
+
+	m,c,v,err = ti.Get([]byte("foo"), 2)
+	fmt.Println(m,c,v,err)
+
+	ti.Put([]byte("foo"), revision{main: 4})
+	ti.Tombstone([]byte("foo"), revision{main: 6})
+
+}
 
 func TestIndexGet(t *testing.T) {
 	ti := newTreeIndex()

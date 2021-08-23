@@ -22,7 +22,7 @@ import (
 	"github.com/coreos/etcd/mvcc"
 	"github.com/coreos/pkg/capnslog"
 	"github.com/jonboulle/clockwork"
-	"context"
+	"golang.org/x/net/context"
 )
 
 var (

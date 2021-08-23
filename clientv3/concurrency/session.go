@@ -18,7 +18,7 @@ import (
 	"time"
 
 	v3 "github.com/coreos/etcd/clientv3"
-	"context"
+	"golang.org/x/net/context"
 )
 
 const defaultSessionTTL = 60

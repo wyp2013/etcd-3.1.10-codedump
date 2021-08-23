@@ -21,7 +21,7 @@ import (
 	"github.com/coreos/etcd/clientv3"
 	"github.com/coreos/etcd/pkg/transport"
 	"github.com/coreos/pkg/capnslog"
-	"context"
+	"golang.org/x/net/context"
 )
 
 var (

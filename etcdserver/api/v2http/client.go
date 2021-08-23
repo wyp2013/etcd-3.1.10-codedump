@@ -42,7 +42,7 @@ import (
 	"github.com/coreos/pkg/capnslog"
 	"github.com/jonboulle/clockwork"
 	"github.com/prometheus/client_golang/prometheus"
-	"context"
+	"golang.org/x/net/context"
 )
 
 const (

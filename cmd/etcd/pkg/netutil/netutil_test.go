@@ -23,7 +23,7 @@ import (
 	"testing"
 	"time"
 
-	"context"
+	"golang.org/x/net/context"
 )
 
 func TestResolveTCPAddrs(t *testing.T) {

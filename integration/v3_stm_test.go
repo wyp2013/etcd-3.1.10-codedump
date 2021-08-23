@@ -22,7 +22,7 @@ import (
 
 	v3 "github.com/coreos/etcd/clientv3"
 	"github.com/coreos/etcd/clientv3/concurrency"
-	"context"
+	"golang.org/x/net/context"
 )
 
 // TestSTMConflict tests that conflicts are retried.

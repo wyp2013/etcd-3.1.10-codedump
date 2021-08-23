@@ -21,7 +21,7 @@ import (
 
 	"github.com/coreos/etcd/clientv3"
 	"github.com/coreos/etcd/clientv3/concurrency"
-	"context"
+	"golang.org/x/net/context"
 )
 
 // TestElectionWait tests if followers can correctly wait for elections.

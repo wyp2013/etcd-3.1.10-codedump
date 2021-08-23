@@ -23,7 +23,7 @@ import (
 	"github.com/coreos/etcd/pkg/report"
 
 	"github.com/spf13/cobra"
-	"context"
+	"golang.org/x/net/context"
 	"golang.org/x/time/rate"
 	"gopkg.in/cheggaaa/pb.v1"
 )

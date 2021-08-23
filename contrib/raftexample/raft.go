@@ -33,7 +33,7 @@ import (
 	"github.com/coreos/etcd/snap"
 	"github.com/coreos/etcd/wal"
 	"github.com/coreos/etcd/wal/walpb"
-	"context"
+	"golang.org/x/net/context"
 )
 
 // A key-value stream backed by raft

@@ -18,7 +18,7 @@ import (
 	"testing"
 	"time"
 
-	"context"
+	"golang.org/x/net/context"
 )
 
 func BenchmarkOneNode(b *testing.B) {

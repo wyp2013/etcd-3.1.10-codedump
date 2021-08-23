@@ -15,7 +15,7 @@
 package main
 
 import (
-	"context"
+	"golang.org/x/net/context"
 	"fmt"
 	"math/rand"
 	"net"

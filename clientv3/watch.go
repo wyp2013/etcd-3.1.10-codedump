@@ -22,7 +22,7 @@ import (
 	v3rpc "github.com/coreos/etcd/etcdserver/api/v3rpc/rpctypes"
 	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
 	mvccpb "github.com/coreos/etcd/mvcc/mvccpb"
-	"context"
+	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 )
 

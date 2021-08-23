@@ -22,7 +22,7 @@ import (
 	"net/url"
 	"path"
 
-	"context"
+	"golang.org/x/net/context"
 
 	"github.com/coreos/etcd/pkg/types"
 )

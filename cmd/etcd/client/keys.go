@@ -28,7 +28,7 @@ import (
 
 	"github.com/coreos/etcd/pkg/pathutil"
 	"github.com/ugorji/go/codec"
-	"context"
+	"golang.org/x/net/context"
 )
 
 const (

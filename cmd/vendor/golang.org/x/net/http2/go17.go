@@ -7,7 +7,7 @@
 package http2
 
 import (
-	"context"
+	"golang.org/x/net/context"
 	"net"
 	"net/http"
 	"net/http/httptrace"

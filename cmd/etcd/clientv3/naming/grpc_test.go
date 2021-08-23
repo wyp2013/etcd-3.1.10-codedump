@@ -19,7 +19,7 @@ import (
 	"reflect"
 	"testing"
 
-	"context"
+	"golang.org/x/net/context"
 	"google.golang.org/grpc/naming"
 
 	etcd "github.com/coreos/etcd/clientv3"
